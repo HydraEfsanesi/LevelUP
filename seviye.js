@@ -124,7 +124,12 @@ client.on("ready", async () => {
   }, 60000);
   console.log("Bot Aktif");
 
-  //------------Seviye-------------------//
+  client.user.setStatus("oynuyor");
+  client.user.setActivity(oynuyor, {
+    type: "LISTENING",
+  });
+});
+//------------Seviye-------------------//
 client.on("message", async message => {
   let prefix = ayarlar.prefix;
 
